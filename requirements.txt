@@ -1,0 +1,6 @@
+dask
+pandas
+gcsfs
+numpy
+google-auth
+google-cloud-bigquery

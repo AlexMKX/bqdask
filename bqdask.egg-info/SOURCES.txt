@@ -1,0 +1,9 @@
+pyproject.toml
+setup.py
+bqdask/__init__.py
+bqdask.egg-info/PKG-INFO
+bqdask.egg-info/SOURCES.txt
+bqdask.egg-info/dependency_links.txt
+bqdask.egg-info/requires.txt
+bqdask.egg-info/top_level.txt
+bqdask/../requirements.txt
