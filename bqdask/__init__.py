@@ -339,7 +339,7 @@ class BQDask:
         client = self.get_bq()
         r = client.query(query, job_config=job_config).result()
         new_rows = r.total_rows
-        log.debug(f'{new_rows} rows observed in {table}')
+        log.debug(f'{new_rows} rows to fetch in {table}')
         dd_new = dd.from_pandas(r.to_dataframe(), chunksize=self.DASK_CHUNK_SIZE)
         if new_rows > 0:
             dd_new = df_fixer(dd_new)
