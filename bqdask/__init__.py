@@ -12,7 +12,7 @@ import dask.distributed
 import uuid
 import gcsfs
 import numpy as np
-import google.auth
+from google.oauth2 import service_account
 import datetime
 from google.cloud import bigquery
 from pathlib import Path
@@ -76,7 +76,7 @@ class BQDask:
         self.PROJECT_ID = project_id
         self.PATH_PARQUET = path_parquet
         self.EXPORT_BUCKET = export_bucket
-        self.credentials = service_acct_json.Credentials.from_service_account_file(
+        self.credentials = service_account.Credentials.from_service_account_file(
             service_acct_json, scopes=[
                 "https://www.googleapis.com/auth/drive",
                 "https://www.googleapis.com/auth/bigquery",
